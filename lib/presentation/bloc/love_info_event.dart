@@ -16,3 +16,5 @@ class GetLoveInfoEvent extends LoveInfoEvent {
   @override
   List<Object> get props => [firstName,secondName];
 }
+
+class Reset extends LoveInfoEvent {}

@@ -27,6 +27,8 @@ class LoveInfoBloc extends Bloc<LoveInfoEvent, LoveInfoState> {
       );
       emit(result);
     });
+
+    on<Reset>((event, emit) => emit(Empty()));
   }
 }
 

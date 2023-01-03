@@ -35,9 +35,9 @@ class LoveInfoBody extends StatelessWidget {
       // mainAxisAlignment: MainAxisAlignment.center,
       physics: NeverScrollableScrollPhysics(),
       children: [
-        SizedBox(height: MediaQuery.of(context).size.height*0.3,),
-        LoveInfoForm(),
-        SizedBox(height: MediaQuery.of(context).size.height*0.3,),
+        SizedBox(height: MediaQuery.of(context).size.height*0.24,),
+        const LoveInfoForm(),
+        // SizedBox(height: MediaQuery.of(context).size.height*0.9,),
         // Spacer(flex: 2,)
       ],
     );
