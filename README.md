@@ -7,7 +7,7 @@ A simple app based on a api to guess the love percentage between two names
 
 ####  Check out the [API](https://rapidapi.com/ajith/api/love-calculator)
 
-
-<img src="./screenshots/ss1.jpg" height=500px/>
-
-<img src="./screenshots/ss2.jpg" height=500px/>
+## ScreenShots
+|   |  |  
+|--------------|-----------|
+| <img src="./screenshots/ss2.jpg" height=500px/> |  <img src="./screenshots/ss1.jpg" height=500px/>    |
