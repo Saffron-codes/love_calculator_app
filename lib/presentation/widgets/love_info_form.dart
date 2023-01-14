@@ -23,14 +23,15 @@ class LoveInfoForm extends StatelessWidget {
     }
 
     void takeScreenshot() async {
+      String releaseUrl = "https://github.com/Saffron-codes/love_calculator_app/releases";
       screenshotController
           .capture(delay: Duration(seconds: 1))
           .then((image) async {
         final tempDir = await getTemporaryDirectory();
         final file = await File('${tempDir.path}/image.jpg').create();
         file.writeAsBytesSync(image!.toList());
-        Share.shareFiles([file.path],
-            text: '${firstNameController.text} ${secondNameController.text}');
+        await Share.shareXFiles([XFile(file.path)],
+            text: 'Get this app 🚀 \n$releaseUrl');
       });
     }
 
@@ -42,7 +43,7 @@ class LoveInfoForm extends StatelessWidget {
           children: [
             TextFormField(
               controller: firstNameController,
-              decoration: InputDecoration(hintText: "First Name"),
+              decoration: const InputDecoration(hintText: "First Name"),
               keyboardType: TextInputType.name,
               validator: (value) {
                 if (value == null || value.isEmpty) {
@@ -53,7 +54,7 @@ class LoveInfoForm extends StatelessWidget {
             ),
             TextFormField(
               controller: secondNameController,
-              decoration: InputDecoration(hintText: "Second Name"),
+              decoration: const InputDecoration(hintText: "Second Name"),
               keyboardType: TextInputType.name,
               validator: (value) {
                 if (value == null || value.isEmpty) {
